@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" charset="utf-8"></script>
+    <link rel="icon" href="./assets/img/favicon.ico">
+    <title>Flappy bat</title>
+</head>
+<body>
+    <div class="border-left"></div>
+    <div class="game-container">
+        <div class="border-top"></div>
+        <div class="sky">
+            <img src="./assets/img/soundOff.png" onclick="songMuted()" id="song-btn" alt="image" />
+            <div class="game-menu">
+                <h2>Menu</h2>
+                <button class="start-restart" onclick="startRestart()">Start/restart</button>
+                <button class="game-score" onclick="menuScoreTable()">Table score</button>
+            </div>
+            <div class="your-score">
+                <h2 class="total-score">Your Score:</h2>
+                <button class="score-player-btn" onclick="showMenu()">Submit</button>
+            </div>
+            <div class="score-table">
+                <h2>Scoreboard</h2>
+                <div>
+                    <ol class="player-score">
+                        <li class="player-score-one">-</li>
+                        <li class="player-score-two">-</li>
+                        <li class="player-score-three">-</li>
+                        <li class="player-score-four">-</li>
+                        <li class="player-score-five">-</li>
+                        <li class="player-score-six">-</li>
+                        <li class="player-score-seven">-</li>
+                        <li class="player-score-eight">-</li>
+                        <li class="player-score-nine">-</li>
+                        <li class="player-score-ten">-</li>
+                    </ol>
+                </div>
+                <button class="score-back">Back</button>
+            </div>
+            <div class="bird"></div>
+        </div>
+        <div class="ground">
+            <div class="scoreboard">0</div>
+        </div>
+    </div>
+    <div class="border-right"></div>
+</body>
+</html>

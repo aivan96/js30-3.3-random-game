@@ -1,0 +1,265 @@
+@font-face {
+    font-family: "LifeCraft_Font";
+    src: url("./assets/fonts/LifeCraft_Font.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.game-container{
+    width: 500px;
+    height: 730px;
+    position: absolute;
+    left: 60px;
+}
+
+.border-left{
+    width: 80px;
+    height: 790px;
+    position: absolute;
+    background-color: white;
+    left: 0px;
+    z-index: +3;
+}
+
+.border-right{
+    width: 120px;
+    height: 790px;
+    position: absolute;
+    background-color: white;
+    z-index: +3;
+    left: 500px;
+}
+
+.border-top{
+    width: 700px;
+    height: 50px;
+    position: absolute;
+    background-color: white;
+    z-index: +3;
+    top: -49px;
+    left: -60px;
+}
+
+.sky{
+    background-image: url("./assets/img/background.png");
+    width: 500px;
+    height: 580px;
+    position: absolute;
+    z-index: 0;
+}
+
+.ground{
+    background-image: url("./assets/img/ground.png");
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    top: 580px;
+    z-index: +2;
+}
+
+.bird{
+    background-image: url("./assets/img/bird.gif");
+    background-size: 100%;
+    transform: scale(-1, 1);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 60px;
+    height: 45px;
+}
+
+.obstacle{
+    background-image: url("./assets/img/obstacle.png");
+    background-size: 60px;
+    width: 60px;
+    height: 300px;
+    position: absolute;
+    z-index: +1;
+}
+
+.top-obstacle{
+    background-image: url("./assets/img/topobstacle.png");
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 300px;
+    position: absolute;
+    z-index: +1;
+}
+
+.scoreboard{
+    position: absolute;
+    z-index: +4;
+    left: 220px;
+    top: 60px;
+    width: 100px;
+    height: 50px;
+    font-family: LifeCraft_Font;
+    font-size: 50px;
+    font-weight: bold;
+    color: darkred;
+}
+
+.game-menu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    z-index: +5;
+    left: 30px;
+    top: 150px;
+    width: 400px;
+    height: 400px;
+    background-image: url("./assets/img/sckroll.png");
+    background-size: 400px 350px;
+    background-repeat: no-repeat;
+}
+
+.game-menu h2{
+    position: absolute;
+    top: 20px;
+    left: 150px;
+    font-family: LifeCraft_Font;
+    font-size: 50px;
+    font-weight: bold;
+    color: darkred;
+}
+
+.game-menu button{
+    background: none;
+    border: 0;
+    font-family: LifeCraft_Font;
+    font-size: 40px;
+    font-weight: bold;
+    color: darkred;
+}
+
+.game-menu button:hover{
+    opacity: 0.8;
+}
+
+.score-table{
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    height: 700px;
+    left: 30px;
+    background-image: url("./assets/img/sckroll.png");
+    background-size: 400px 650px;
+    background-repeat: no-repeat;
+
+}
+
+.score-table div{
+    display: flex;
+}
+
+.score-table h2{
+    position: absolute;
+    top: 90px;
+    left: 125px;
+    background: none;
+    border: 0;
+    text-decoration: underline;
+    font-family: LifeCraft_Font;
+    font-size: 40px;
+    font-weight: bold;
+    color: darkred;
+}
+
+.player-score{
+    position: absolute;
+    top: 150px;
+    left: 70px;
+    background: none;
+    border: 0;
+    font-family: LifeCraft_Font;
+    font-size: 30px;
+    font-weight: bold;
+    color: darkred;
+}
+
+.score-back{
+    position: absolute;
+    top: 500px;
+    left: 170px;
+    background: none;
+    border: 0;
+    font-family: LifeCraft_Font;
+    font-size: 30px;
+    font-weight: bold;
+    color: darkred;
+}
+
+.score-back:hover{
+    opacity: 0.8;
+}
+
+#song-btn{
+    position: absolute;
+    top: 5px;
+    left: 380px;
+    background-size: contain;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border-color: red;
+    border-radius: 50%;
+}
+
+#song-btn:hover{
+    opacity: 0.8;
+}
+
+.your-score{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    z-index: +5;
+    left: 30px;
+    top: 150px;
+    width: 400px;
+    height: 400px;
+    background-image: url("./assets/img/sckroll.png");
+    background-size: 400px 350px;
+    background-repeat: no-repeat;
+    font-family: LifeCraft_Font;
+    font-size: 50px;
+    font-weight: bold;
+    color: darkred;
+}
+
+.your-score h2{
+    position: absolute;
+    top: 90px;
+    left: 80px;
+    font-family: LifeCraft_Font;
+    font-size: 50px;
+    font-weight: bold;
+    color: darkred;
+}
+
+.your-score button{
+    position: absolute;
+    left: 150px;
+    top: 220px;
+    background: none;
+    border: 0;
+    font-family: LifeCraft_Font;
+    font-size: 40px;
+    font-weight: bold;
+    color: darkred;
+}
+
+.your-score button:hover{
+    opacity: 0.8;
+}
